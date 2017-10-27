@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="OFx-f4-CbP">
             <objects>
-                <viewController id="WWY-HB-i9M" sceneMemberID="viewController">
+                <viewController id="WWY-HB-i9M" customClass="LoginViewController" customModule="PokemonGO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hoY-Ov-xCY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,12 +44,18 @@
                                         <color key="backgroundColor" red="0.96376609802246094" green="0.81977617740631104" blue="0.2861829400062561" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Log in"/>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="WWY-HB-i9M" eventType="touchUpInside" id="Wra-S6-7Nl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnI-h3-EpZ">
                                         <rect key="frame" x="0.0" y="114" width="311" height="30"/>
                                         <color key="backgroundColor" red="0.29154103994369507" green="0.40242397785186768" blue="0.67458534240722656" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Log in with Facebook"/>
+                                        <connections>
+                                            <action selector="loginWithFacebookButtonTapped:" destination="WWY-HB-i9M" eventType="touchUpInside" id="1HC-J5-Rag"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -104,15 +110,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Af3-KK-pzj"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="goL-R6-Xhv" id="vzt-ow-dfp"/>
+                        <outlet property="passwordTextField" destination="5x3-KO-n0R" id="5xE-yJ-KVa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8h-P0-6vB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-50.399999999999999" y="-870.31484257871068"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="ErG-f5-XVK">
             <objects>
-                <viewController id="a9d-QQ-AwE" sceneMemberID="viewController">
+                <viewController id="a9d-QQ-AwE" customClass="SignupViewController" customModule="PokemonGO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7rN-5V-Jpp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,12 +147,18 @@
                                         <color key="backgroundColor" red="0.96376609800000002" green="0.81977617739999997" blue="0.28618294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Sign up"/>
+                                        <connections>
+                                            <action selector="signupButtonTapped:" destination="a9d-QQ-AwE" eventType="touchUpInside" id="Xhr-0r-uGW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRO-gV-kkN">
                                         <rect key="frame" x="0.0" y="114" width="311" height="30"/>
                                         <color key="backgroundColor" red="0.29154103990000002" green="0.40242397790000001" blue="0.67458534240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Sign up with Facebook"/>
+                                        <connections>
+                                            <action selector="signupWithFacebookButtonTapped:" destination="a9d-QQ-AwE" eventType="touchUpInside" id="OgX-4s-9nl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -194,15 +210,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgG-9s-fAj"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="6FI-yd-JBu" id="8jL-4q-JKx"/>
+                        <outlet property="passwordTextField" destination="jpc-WC-sYu" id="2dh-RP-3pG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcF-eb-a7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1297" y="-870"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonGO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="PokemonGO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,7 +249,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Pokedex"/>
                                 <connections>
-                                    <segue destination="Xko-uh-Yk4" kind="presentation" id="10r-X5-XTC"/>
+                                    <segue destination="Xko-uh-Yk4" kind="presentation" identifier="showPokedexFromMap" id="10r-X5-XTC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -247,15 +267,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="WIf-dR-rXX"/>
+                    <connections>
+                        <outlet property="mapView" destination="Npt-YG-pnh" id="602-Xt-wIN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--World View Controller-->
         <scene sceneID="23L-Lg-Mmm">
             <objects>
-                <viewController id="bwk-Zz-F5R" sceneMemberID="viewController">
+                <viewController id="bwk-Zz-F5R" customClass="ARWorldViewController" customModule="PokemonGO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rqh-lT-Ftn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,7 +302,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Pokedex"/>
                                 <connections>
-                                    <segue destination="Xko-uh-Yk4" kind="presentation" id="2NW-zx-8LJ"/>
+                                    <segue destination="Xko-uh-Yk4" kind="presentation" identifier="showPokedexFromWorld" id="2NW-zx-8LJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -296,15 +319,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t1x-Hz-iIL"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="0e6-YT-Iin" id="30m-lA-zUR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yy9-LP-hd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1636" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokedex View Controller-->
         <scene sceneID="qMG-LY-V5R">
             <objects>
-                <viewController id="Xko-uh-Yk4" sceneMemberID="viewController">
+                <viewController id="Xko-uh-Yk4" customClass="PokedexViewController" customModule="PokemonGO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p8g-wC-GCm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,7 +339,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokemonCell" id="ccs-PG-L2A">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokemonCell" id="ccs-PG-L2A" customClass="PokemonTableViewCell" customModule="PokemonGO" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ccs-PG-L2A" id="GxO-hz-cdL">
@@ -342,6 +368,10 @@
                                                 <constraint firstItem="RsC-17-DgH" firstAttribute="centerY" secondItem="GxO-hz-cdL" secondAttribute="centerY" id="h3X-k9-3Az"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="RsC-17-DgH" id="e5l-LC-9gN"/>
+                                            <outlet property="spriteImageView" destination="PRl-MS-h2w" id="Neg-zP-rqi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -355,6 +385,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fw0-d6-f2C"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="LCV-dX-7H3" id="yOl-fL-vDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbb-Ci-28m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,6 +420,6 @@
         <image name="Pokedex" width="850" height="850"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="10r-X5-XTC"/>
+        <segue reference="2NW-zx-8LJ"/>
     </inferredMetricsTieBreakers>
 </document>

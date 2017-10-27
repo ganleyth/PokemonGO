@@ -11,6 +11,13 @@
 		185008191FA29C1000BFDB40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185008171FA29C1000BFDB40 /* Main.storyboard */; };
 		1850081B1FA29C1000BFDB40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1850081A1FA29C1000BFDB40 /* Assets.xcassets */; };
 		1850081E1FA29C1000BFDB40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1850081C1FA29C1000BFDB40 /* LaunchScreen.storyboard */; };
+		1850082D1FA2B0DF00BFDB40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850082C1FA2B0DF00BFDB40 /* LoginViewController.swift */; };
+		1850082F1FA2B0E600BFDB40 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850082E1FA2B0E600BFDB40 /* SignupViewController.swift */; };
+		185008311FA2B0F500BFDB40 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185008301FA2B0F500BFDB40 /* MapViewController.swift */; };
+		185008331FA2B10200BFDB40 /* ARWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185008321FA2B10200BFDB40 /* ARWorldViewController.swift */; };
+		185008351FA2B10900BFDB40 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185008341FA2B10900BFDB40 /* PokedexViewController.swift */; };
+		185008371FA2B14300BFDB40 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185008361FA2B14300BFDB40 /* PokemonTableViewCell.swift */; };
+		1850083A1FA2B23400BFDB40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185008391FA2B23400BFDB40 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		1850081A1FA29C1000BFDB40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1850081D1FA29C1000BFDB40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1850081F1FA29C1000BFDB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1850082C1FA2B0DF00BFDB40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1850082E1FA2B0E600BFDB40 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		185008301FA2B0F500BFDB40 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		185008321FA2B10200BFDB40 /* ARWorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARWorldViewController.swift; sourceTree = "<group>"; };
+		185008341FA2B10900BFDB40 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		185008361FA2B14300BFDB40 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		185008391FA2B23400BFDB40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1850083A1FA2B23400BFDB40 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +53,7 @@
 			children = (
 				185008121FA29C1000BFDB40 /* PokemonGO */,
 				185008111FA29C1000BFDB40 /* Products */,
+				185008381FA2B23400BFDB40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +122,11 @@
 		1850082A1FA2B09500BFDB40 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1850082C1FA2B0DF00BFDB40 /* LoginViewController.swift */,
+				1850082E1FA2B0E600BFDB40 /* SignupViewController.swift */,
+				185008301FA2B0F500BFDB40 /* MapViewController.swift */,
+				185008321FA2B10200BFDB40 /* ARWorldViewController.swift */,
+				185008341FA2B10900BFDB40 /* PokedexViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -113,8 +134,17 @@
 		1850082B1FA2B0A100BFDB40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				185008361FA2B14300BFDB40 /* PokemonTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		185008381FA2B23400BFDB40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				185008391FA2B23400BFDB40 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +180,11 @@
 					1850080F1FA29C1000BFDB40 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -189,7 +224,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1850082F1FA2B0E600BFDB40 /* SignupViewController.swift in Sources */,
+				185008371FA2B14300BFDB40 /* PokemonTableViewCell.swift in Sources */,
+				1850082D1FA2B0DF00BFDB40 /* LoginViewController.swift in Sources */,
 				185008141FA29C1000BFDB40 /* AppDelegate.swift in Sources */,
+				185008351FA2B10900BFDB40 /* PokedexViewController.swift in Sources */,
+				185008311FA2B0F500BFDB40 /* MapViewController.swift in Sources */,
+				185008331FA2B10200BFDB40 /* ARWorldViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
