@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		185008141FA29C1000BFDB40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185008131FA29C1000BFDB40 /* AppDelegate.swift */; };
-		185008161FA29C1000BFDB40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185008151FA29C1000BFDB40 /* ViewController.swift */; };
 		185008191FA29C1000BFDB40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185008171FA29C1000BFDB40 /* Main.storyboard */; };
 		1850081B1FA29C1000BFDB40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1850081A1FA29C1000BFDB40 /* Assets.xcassets */; };
 		1850081E1FA29C1000BFDB40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1850081C1FA29C1000BFDB40 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		185008101FA29C1000BFDB40 /* PokemonGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185008131FA29C1000BFDB40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		185008151FA29C1000BFDB40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		185008181FA29C1000BFDB40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1850081A1FA29C1000BFDB40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1850081D1FA29C1000BFDB40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,69 @@
 		185008121FA29C1000BFDB40 /* PokemonGO */ = {
 			isa = PBXGroup;
 			children = (
-				185008131FA29C1000BFDB40 /* AppDelegate.swift */,
-				185008151FA29C1000BFDB40 /* ViewController.swift */,
-				185008171FA29C1000BFDB40 /* Main.storyboard */,
-				1850081A1FA29C1000BFDB40 /* Assets.xcassets */,
-				1850081C1FA29C1000BFDB40 /* LaunchScreen.storyboard */,
-				1850081F1FA29C1000BFDB40 /* Info.plist */,
+				1850082B1FA2B0A100BFDB40 /* View */,
+				1850082A1FA2B09500BFDB40 /* ViewController */,
+				185008291FA2B09000BFDB40 /* Model */,
+				185008281FA2B08200BFDB40 /* ModelController */,
+				185008271FA2B07800BFDB40 /* Helpers */,
+				185008251FA2B05100BFDB40 /* UI */,
+				185008261FA2B06100BFDB40 /* Resources */,
 			);
 			path = PokemonGO;
+			sourceTree = "<group>";
+		};
+		185008251FA2B05100BFDB40 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				185008171FA29C1000BFDB40 /* Main.storyboard */,
+				1850081C1FA29C1000BFDB40 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		185008261FA2B06100BFDB40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				185008131FA29C1000BFDB40 /* AppDelegate.swift */,
+				1850081A1FA29C1000BFDB40 /* Assets.xcassets */,
+				1850081F1FA29C1000BFDB40 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		185008271FA2B07800BFDB40 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		185008281FA2B08200BFDB40 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
+		185008291FA2B09000BFDB40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1850082A1FA2B09500BFDB40 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		1850082B1FA2B0A100BFDB40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185008161FA29C1000BFDB40 /* ViewController.swift in Sources */,
 				185008141FA29C1000BFDB40 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
