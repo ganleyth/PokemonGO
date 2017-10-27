@@ -8,9 +8,20 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
 class LocationController {
     
     static let shared = LocationController()
     let locationManager = CLLocationManager()
+    
+    // MARK: - Map functions
+    func fetchPointsOfInterest(inRegion region: MKCoordinateRegion, with completion: @escaping MKLocalSearchCompletionHandler) {
+        let request = MKLocalSearchRequest()
+        request.region = region
+        request.naturalLanguageQuery = "restaurant"
+        
+        let search = MKLocalSearch(request: request)
+        search.start(completionHandler: completion)
+    }
 }
