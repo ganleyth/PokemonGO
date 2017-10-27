@@ -23,6 +23,15 @@ class MapViewController: UIViewController {
     
     // MARK: - Helper methods
     func setupMap() {
+        mapView.delegate = self
         mapView.showsUserLocation = true
+    }
+}
+
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        // Update the map view's rectangle to display a radius around the current location
+        mapView.centerCoordinate = userLocation.coordinate
+        mapView.setDefaultRegion()
     }
 }
