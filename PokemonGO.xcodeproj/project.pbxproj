@@ -20,6 +20,7 @@
 		1850083A1FA2B23400BFDB40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185008391FA2B23400BFDB40 /* MapKit.framework */; };
 		1850083C1FA2B39B00BFDB40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850083B1FA2B39B00BFDB40 /* Constants.swift */; };
 		1850083E1FA2B3B400BFDB40 /* ProjectErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850083D1FA2B3B400BFDB40 /* ProjectErrors.swift */; };
+		18AE23DA1FA39AA400DF6934 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE23D91FA39AA400DF6934 /* LocationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		185008391FA2B23400BFDB40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1850083B1FA2B39B00BFDB40 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1850083D1FA2B3B400BFDB40 /* ProjectErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectErrors.swift; sourceTree = "<group>"; };
+		18AE23D91FA39AA400DF6934 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				1850082A1FA2B09500BFDB40 /* ViewController */,
 				185008291FA2B09000BFDB40 /* Model */,
 				185008281FA2B08200BFDB40 /* ModelController */,
+				18AE23D81FA39A7D00DF6934 /* Controllers */,
 				185008271FA2B07800BFDB40 /* Helpers */,
 				185008251FA2B05100BFDB40 /* UI */,
 				185008261FA2B06100BFDB40 /* Resources */,
@@ -151,6 +154,14 @@
 				185008391FA2B23400BFDB40 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18AE23D81FA39A7D00DF6934 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18AE23D91FA39AA400DF6934 /* LocationController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 				185008351FA2B10900BFDB40 /* PokedexViewController.swift in Sources */,
 				185008311FA2B0F500BFDB40 /* MapViewController.swift in Sources */,
 				185008331FA2B10200BFDB40 /* ARWorldViewController.swift in Sources */,
+				18AE23DA1FA39AA400DF6934 /* LocationController.swift in Sources */,
 				1850083C1FA2B39B00BFDB40 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
