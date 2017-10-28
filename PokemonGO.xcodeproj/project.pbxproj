@@ -21,6 +21,9 @@
 		1850083C1FA2B39B00BFDB40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850083B1FA2B39B00BFDB40 /* Constants.swift */; };
 		1850083E1FA2B3B400BFDB40 /* ProjectErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850083D1FA2B3B400BFDB40 /* ProjectErrors.swift */; };
 		189B9D501FA3CB4300882F76 /* MKMapView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B9D4F1FA3CB4300882F76 /* MKMapView+Extensions.swift */; };
+		189B9D531FA3DC6300882F76 /* StoreAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B9D521FA3DC6300882F76 /* StoreAnnotationView.swift */; };
+		189B9D551FA3DE8F00882F76 /* PokemonGOAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B9D541FA3DE8F00882F76 /* PokemonGOAnnotation.swift */; };
+		189B9D571FA3DFF400882F76 /* PokemonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B9D561FA3DFF400882F76 /* PokemonAnnotationView.swift */; };
 		18AE23DA1FA39AA400DF6934 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE23D91FA39AA400DF6934 /* LocationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		1850083B1FA2B39B00BFDB40 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1850083D1FA2B3B400BFDB40 /* ProjectErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectErrors.swift; sourceTree = "<group>"; };
 		189B9D4F1FA3CB4300882F76 /* MKMapView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extensions.swift"; sourceTree = "<group>"; };
+		189B9D521FA3DC6300882F76 /* StoreAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAnnotationView.swift; sourceTree = "<group>"; };
+		189B9D541FA3DE8F00882F76 /* PokemonGOAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGOAnnotation.swift; sourceTree = "<group>"; };
+		189B9D561FA3DFF400882F76 /* PokemonAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAnnotationView.swift; sourceTree = "<group>"; };
 		18AE23D91FA39AA400DF6934 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +89,7 @@
 				18AE23D81FA39A7D00DF6934 /* Controllers */,
 				185008271FA2B07800BFDB40 /* Helpers */,
 				185008251FA2B05100BFDB40 /* UI */,
+				189B9D511FA3DC3900882F76 /* CustomObjects */,
 				189B9D4E1FA3CB3100882F76 /* Extensions */,
 				185008261FA2B06100BFDB40 /* Resources */,
 			);
@@ -165,6 +172,16 @@
 				189B9D4F1FA3CB4300882F76 /* MKMapView+Extensions.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		189B9D511FA3DC3900882F76 /* CustomObjects */ = {
+			isa = PBXGroup;
+			children = (
+				189B9D541FA3DE8F00882F76 /* PokemonGOAnnotation.swift */,
+				189B9D521FA3DC6300882F76 /* StoreAnnotationView.swift */,
+				189B9D561FA3DFF400882F76 /* PokemonAnnotationView.swift */,
+			);
+			name = CustomObjects;
 			sourceTree = "<group>";
 		};
 		18AE23D81FA39A7D00DF6934 /* Controllers */ = {
@@ -255,10 +272,13 @@
 				1850082F1FA2B0E600BFDB40 /* SignupViewController.swift in Sources */,
 				1850083E1FA2B3B400BFDB40 /* ProjectErrors.swift in Sources */,
 				185008371FA2B14300BFDB40 /* PokemonTableViewCell.swift in Sources */,
+				189B9D571FA3DFF400882F76 /* PokemonAnnotationView.swift in Sources */,
 				189B9D501FA3CB4300882F76 /* MKMapView+Extensions.swift in Sources */,
 				1850082D1FA2B0DF00BFDB40 /* LoginViewController.swift in Sources */,
+				189B9D551FA3DE8F00882F76 /* PokemonGOAnnotation.swift in Sources */,
 				185008141FA29C1000BFDB40 /* AppDelegate.swift in Sources */,
 				185008351FA2B10900BFDB40 /* PokedexViewController.swift in Sources */,
+				189B9D531FA3DC6300882F76 /* StoreAnnotationView.swift in Sources */,
 				185008311FA2B0F500BFDB40 /* MapViewController.swift in Sources */,
 				185008331FA2B10200BFDB40 /* ARWorldViewController.swift in Sources */,
 				18AE23DA1FA39AA400DF6934 /* LocationController.swift in Sources */,

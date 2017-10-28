@@ -26,6 +26,8 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.showsPointsOfInterest = false
+        mapView.register(StoreAnnotationView.self, forAnnotationViewWithReuseIdentifier: Constants.ReuseIdentifiers.storeAnnotationViewIdentifier)
+        mapView.register(PokemonAnnotationView.self, forAnnotationViewWithReuseIdentifier: Constants.ReuseIdentifiers.pokemonAnnotationViewIdentifier)
     }
     
     func fetchLocalStores(inRegion region: MKCoordinateRegion) {
@@ -35,10 +37,9 @@ class MapViewController: UIViewController {
             
             let responseMapItems = response.mapItems
             responseMapItems.forEach { (mapItem) in
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = mapItem.placemark.coordinate
-                if let title = mapItem.placemark.title { annotation.title = title }
-                if let name = mapItem.name { print(name) }
+                let name = mapItem.placemark.name
+                let coordinate = mapItem.placemark.coordinate
+                let annotation = PokemonGOAnnotation(title: name, coordinate: coordinate, type: PokemonGOAnnotation.AnnotationType.store)
                 self.mapView.addAnnotation(annotation)
             }
         }
@@ -51,5 +52,18 @@ extension MapViewController: MKMapViewDelegate {
         mapView.centerCoordinate = userLocation.coordinate
         let defaultRegion = mapView.setDefaultRegion()
         fetchLocalStores(inRegion: defaultRegion)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let pokemonGOAnnotation = annotation as? PokemonGOAnnotation else { return nil }
+        switch pokemonGOAnnotation.type {
+        case .store:
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: Constants.ReuseIdentifiers.storeAnnotationViewIdentifier, for: annotation)
+            annotationView.canShowCallout = true
+            return annotationView
+        case .pokemon:
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: Constants.ReuseIdentifiers.pokemonAnnotationViewIdentifier, for: annotation)
+            return annotationView
+        }
     }
 }

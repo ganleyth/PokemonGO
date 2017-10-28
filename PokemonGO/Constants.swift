@@ -10,4 +10,9 @@ import Foundation
 
 struct Constants {
     
+    struct ReuseIdentifiers {
+        static let storeAnnotationViewIdentifier = "storeAnnotationView"
+        static let pokemonAnnotationViewIdentifier = "pokemonAnnotationView"
+    }
+    
 }
