@@ -15,4 +15,11 @@ struct Constants {
         static let pokemonAnnotationViewIdentifier = "pokemonAnnotationView"
     }
     
+    struct Notifications {
+        static let nearbyPokemonUpdatedNotication: Notification.Name = Notification.Name(rawValue: "nearbyPokemonUpdated")
+    }
+    
+    struct PokeAPI {
+        static let baseURL = URL(string: "https://pokeapi.co/api/v2/pokemon/")
+    }
 }
