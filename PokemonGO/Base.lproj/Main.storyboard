@@ -238,7 +238,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="EnterWorldButton"/>
                                 <connections>
-                                    <segue destination="bwk-Zz-F5R" kind="show" identifier="showWorld" id="cAz-vx-bV6"/>
+                                    <segue destination="bwk-Zz-F5R" kind="presentation" identifier="showWorld" modalTransitionStyle="flipHorizontal" id="cAz-vx-bV6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODw-Ln-kCd">
@@ -294,6 +294,9 @@
                                     <constraint firstAttribute="width" constant="80" id="gMf-9n-uI8"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="EnterMapButton"/>
+                                <connections>
+                                    <action selector="enterMapButtonTapped:" destination="bwk-Zz-F5R" eventType="touchUpInside" id="GNB-1P-sBa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXN-xq-bgn">
                                 <rect key="frame" x="16" y="567" width="80" height="80"/>
