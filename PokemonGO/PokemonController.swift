@@ -8,6 +8,7 @@
 
 import Foundation
 import GameKit
+import MapKit
 
 class PokemonController {
     static let shared = PokemonController()
@@ -46,6 +47,7 @@ class PokemonController {
                 guard let pokemonData = data else { NSLog("Data returned from initial pokemon fetch is nil"); return }
                 guard var pokemon = try? self.decoder.decode(Pokemon.self, from: pokemonData) else { NSLog("JSON decoding failed"); return }
                 self.fetchSprite(for: pokemon, with: { (data) in
+                    guard let data = data else { NSLog("Sprite data is nil"); return }
                     pokemon.setSpriteData(value: data)
                     fetchedPokemon.append(pokemon)
                     self.spriteLoadingDispatchGroup.leave()
@@ -57,6 +59,11 @@ class PokemonController {
         spriteLoadingDispatchGroup.notify(queue: DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive)) {
             self.nearbyPokemon = fetchedPokemon
         }
+    }
+    
+    func setLocation(for pokemon: inout Pokemon, inRange range: MKCoordinateRegion) {
+        let randomLocation = range.randomLocationInRegion()
+        pokemon.setCoordinate(value: randomLocation)
     }
     
     // MARK: - Helper methods

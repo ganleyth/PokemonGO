@@ -28,6 +28,7 @@
 		189B9D551FA3DE8F00882F76 /* PokemonGOAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B9D541FA3DE8F00882F76 /* PokemonGOAnnotation.swift */; };
 		189B9D571FA3DFF400882F76 /* PokemonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B9D561FA3DFF400882F76 /* PokemonAnnotationView.swift */; };
 		18AE23DA1FA39AA400DF6934 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE23D91FA39AA400DF6934 /* LocationController.swift */; };
+		18BCBDEE1FA8A1AA00667206 /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCBDED1FA8A1AA00667206 /* MKCoordinateRegion+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		189B9D541FA3DE8F00882F76 /* PokemonGOAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGOAnnotation.swift; sourceTree = "<group>"; };
 		189B9D561FA3DFF400882F76 /* PokemonAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAnnotationView.swift; sourceTree = "<group>"; };
 		18AE23D91FA39AA400DF6934 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		18BCBDED1FA8A1AA00667206 /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				189B9D4F1FA3CB4300882F76 /* MKMapView+Extensions.swift */,
+				18BCBDED1FA8A1AA00667206 /* MKCoordinateRegion+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				185008371FA2B14300BFDB40 /* PokemonTableViewCell.swift in Sources */,
 				189B9D571FA3DFF400882F76 /* PokemonAnnotationView.swift in Sources */,
 				189B9D501FA3CB4300882F76 /* MKMapView+Extensions.swift in Sources */,
+				18BCBDEE1FA8A1AA00667206 /* MKCoordinateRegion+Extensions.swift in Sources */,
 				1850082D1FA2B0DF00BFDB40 /* LoginViewController.swift in Sources */,
 				189B9D551FA3DE8F00882F76 /* PokemonGOAnnotation.swift in Sources */,
 				185008141FA29C1000BFDB40 /* AppDelegate.swift in Sources */,

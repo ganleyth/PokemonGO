@@ -14,9 +14,12 @@ class MapViewController: UIViewController {
     
     // MARK: - Properties
     @IBOutlet weak var mapView: MKMapView!
+    var currentRegion: MKCoordinateRegion?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(displayPokemon), name: Constants.Notifications.nearbyPokemonUpdatedNotication, object: nil)
         
         setupMap()
     }
@@ -44,6 +47,20 @@ class MapViewController: UIViewController {
             }
         }
     }
+    
+    @objc func displayPokemon() {
+        guard let currentRegion = currentRegion else { return }
+        for var pokemon in PokemonController.shared.nearbyPokemon {
+            if pokemon.coordinate == nil {
+                PokemonController.shared.setLocation(for: &pokemon, inRange: currentRegion)
+            }
+            
+            guard let coordinate = pokemon.coordinate else { continue }
+            let name = pokemon.name
+            let annotation = PokemonGOAnnotation(title: name, coordinate: coordinate, type: PokemonGOAnnotation.AnnotationType.pokemon)
+            mapView.addAnnotation(annotation)
+        }
+    }
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -51,6 +68,7 @@ extension MapViewController: MKMapViewDelegate {
         // Update the map view's rectangle to display a radius around the current location
         mapView.centerCoordinate = userLocation.coordinate
         let defaultRegion = mapView.setDefaultRegion()
+        currentRegion = defaultRegion
         fetchLocalStores(inRegion: defaultRegion)
     }
     

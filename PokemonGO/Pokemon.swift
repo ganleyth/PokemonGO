@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Pokemon: Codable {
     let name: String
     let id: Int
     let spriteURLs: PokemonSpriteURLs
     var spriteData: Data? = nil
+    var coordinate: CLLocationCoordinate2D? = nil
     
     private enum CodingKeys: String, CodingKey {
         case name
@@ -38,7 +40,11 @@ extension Pokemon: Equatable {
 }
 
 extension Pokemon {
-    mutating func setSpriteData(value: Data?) {
+    mutating func setSpriteData(value: Data) {
         spriteData = value
+    }
+    
+    mutating func setCoordinate(value: CLLocationCoordinate2D) {
+        coordinate = value
     }
 }
