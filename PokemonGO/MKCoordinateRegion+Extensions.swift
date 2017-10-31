@@ -18,12 +18,12 @@ extension MKCoordinateRegion {
         let minLatitude = center.latitude - span.latitudeDelta/2
         let maxLatitude = center.latitude + span.latitudeDelta/2
         
-        let upperBoundRandomLongitude = Int(maxLongitude - minLongitude) * 1000
-        let randomLongitudeOffset = Double(GKRandomSource.sharedRandom().nextInt(upperBound: upperBoundRandomLongitude)) / 1000.0
+        let upperBoundRandomLongitude = Int((maxLongitude - minLongitude) * 1000000)
+        let randomLongitudeOffset = Double(GKRandomSource.sharedRandom().nextInt(upperBound: upperBoundRandomLongitude)) / 1000000.0
         let randomLongitude = randomLongitudeOffset + minLongitude
         
-        let upperBoundRandomLatitude = Int(maxLatitude - minLatitude) * 1000
-        let randomLatitudeOffset = Double(GKRandomSource.sharedRandom().nextInt(upperBound: upperBoundRandomLatitude)) / 1000.0
+        let upperBoundRandomLatitude = Int((maxLatitude - minLatitude) * 1000000)
+        let randomLatitudeOffset = Double(GKRandomSource.sharedRandom().nextInt(upperBound: upperBoundRandomLatitude)) / 1000000.0
         let randomLatitude = randomLatitudeOffset + minLatitude
         
         return CLLocationCoordinate2DMake(randomLatitude, randomLongitude)

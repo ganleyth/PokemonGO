@@ -50,9 +50,11 @@ class MapViewController: UIViewController {
     
     @objc func displayPokemon() {
         guard let currentRegion = currentRegion else { return }
+        print(currentRegion)
         for var pokemon in PokemonController.shared.nearbyPokemon {
             if pokemon.coordinate == nil {
                 PokemonController.shared.setLocation(for: &pokemon, inRange: currentRegion)
+                print(pokemon.coordinate!)
             }
             
             guard let coordinate = pokemon.coordinate else { continue }
