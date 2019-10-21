@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     let testVar = 6
+    let test2 = 2
 
     override func viewDidLoad() {
         super.viewDidLoad()
